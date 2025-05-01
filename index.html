@@ -3,7 +3,6 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flosumu Flower Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -81,73 +80,38 @@
       color: #444;
     }
     .whatsapp-button {
-  background-color: #25D366;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.whatsapp-button:hover {
-  background-color: #1EBE54;
-}
-
-.full-slider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  height: 300px; /* Adjust as needed */
-}
-
-.full-slider img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-  z-index: 1;
-}
-
-.full-slider img.active {
-  display: block;
-  z-index: 2;
-  transition: opacity 1s ease-in-out;
-}
-
-
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .whatsapp-button:hover {
+      background-color: #1EBE54;
+    }
+    .full-slider {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+    .full-slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    .full-slider img.active {
+      display: block;
+      transition: opacity 1s ease-in-out;
+    }
   </style>
 </head>
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function showSlides() {
-    slides.forEach(slide => slide.style.display = "none");
-    slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].style.display = "block";
-    setTimeout(showSlides, 3000); // 3 seconds
-  }
-
-  showSlides();
-</script>
-<script>
-  let currentSlide = 0;
-  const fullSlides = document.querySelectorAll(".full-slider .slide");
-
-  function showSlide() {
-    fullSlides.forEach(slide => slide.classList.remove("active"));
-    currentSlide = (currentSlide + 1) % fullSlides.length;
-    fullSlides[currentSlide].classList.add("active");
-  }
-
-  fullSlides[currentSlide].classList.add("active");
-  setInterval(showSlide, 4000);
-</script>
-
 <body>
 
   <!-- Top Contact Info -->
@@ -174,13 +138,13 @@
       <a href="https://wa.me/995557144054" target="_blank" class="whatsapp-button">
         Contact Us on WhatsApp
       </a>
-      
-      <section class="full-slider">
-        <img class="slide" src="images/slide2.jpeg" alt="Slide 1">
-        <img class="slide" src="images/slide1.jpeg" alt="Slide 2">
-        <img class="slide" src="images/slide3.jpg" alt="Slide 3">
-      </section>
-      
+    </div>
+
+    <section class="full-slider">
+      <img class="slide" src="images/slide2.jpeg" alt="Fresh Flowers">
+      <img class="slide" src="images/slide1.jpeg" alt="Flower Arrangement">
+      <img class="slide" src="images/slide3.jpg" alt="Decorative Plants">
+    </section>
   </section>
 
   <!-- Offer Section -->
@@ -192,6 +156,24 @@
   <div class="subscribe">
     🌸 Subscribe to our flower shop newsletter!
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".full-slider img");
+
+    // Function to show the next slide
+    function showSlide() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
+
+    // Initially show the first slide
+    slides[currentSlide].classList.add("active");
+
+    // Change slide every 4 seconds
+    setInterval(showSlide, 4000);
+  </script>
 
 </body>
 </html>
