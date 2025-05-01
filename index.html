@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flosumu Flower Shop</title>
@@ -93,22 +94,30 @@
   background-color: #1EBE54;
 }
 
-    .slider {
-  position: relative;
+.full-slider {
   width: 100%;
-  max-width: 400px;
-  height: auto;
+  position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: 300px; /* Adjust as needed */
 }
 
-.slide {
-  display: none;
+.full-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  display: none;
+  z-index: 1;
 }
+
+.full-slider img.active {
+  display: block;
+  z-index: 2;
+  transition: opacity 1s ease-in-out;
+}
+
 
   </style>
 </head>
@@ -124,6 +133,19 @@
   }
 
   showSlides();
+</script>
+<script>
+  let currentSlide = 0;
+  const fullSlides = document.querySelectorAll(".full-slider .slide");
+
+  function showSlide() {
+    fullSlides.forEach(slide => slide.classList.remove("active"));
+    currentSlide = (currentSlide + 1) % fullSlides.length;
+    fullSlides[currentSlide].classList.add("active");
+  }
+
+  fullSlides[currentSlide].classList.add("active");
+  setInterval(showSlide, 4000);
 </script>
 
 <body>
@@ -153,14 +175,12 @@
         Contact Us on WhatsApp
       </a>
       
-    </div>
-    <div class="hero-image">
-      <div class="slider">
-        <img class="slide" src="images/slide1.jpeg" alt="Slide 1">
-        <img class="slide" src="images/slide2.jpeg" alt="Slide 2">
+      <section class="full-slider">
+        <img class="slide" src="images/slide2.jpeg" alt="Slide 1">
+        <img class="slide" src="images/slide1.jpeg" alt="Slide 2">
         <img class="slide" src="images/slide3.jpg" alt="Slide 3">
-      </div>
-    </div>
+      </section>
+      
   </section>
 
   <!-- Offer Section -->
