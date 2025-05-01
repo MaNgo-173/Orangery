@@ -3,54 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloom & Petal</title>
+  <title>Flosumu Flower Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      background: #fff8f4;
-      margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
     }
     header {
-      background: blueviolet;
-      padding: 2rem;
-      color: white;
+      background-color: #fddde6;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
     }
-    .content {
-      padding: 2rem;
+    nav {
+      background-color: #f78da7;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
     }
-    .btn {
-      background: #ff69b4;
-      color: white;
-      padding: 1rem 2rem;
+    nav a {
       text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 1rem;
+      color: white;
+      font-weight: 600;
     }
-    footer {
-      background: #ffe4e1;
-      padding: 1rem;
-      font-size: 0.9rem;
+    .hero {
+      display: flex;
+      padding: 50px 20px;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff0f5;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero-text h1 {
+      font-size: 40px;
+      font-family: 'Great Vibes', cursive;
+      color: #333;
+    }
+    .hero-text h2 {
+      font-size: 36px;
+      color: #2d2d2d;
+      margin: 10px 0;
+    }
+    .hero-text p {
+      font-size: 16px;
+      margin: 20px 0;
+    }
+    .hero-text a {
+      text-decoration: none;
+      background-color: #f78da7;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+    .hero-image img {
+      max-width: 350px;
+    }
+    .offer {
+      background-color: #fff;
+      padding: 30px;
+      text-align: center;
+      font-size: 20px;
+      color: #d6336c;
+    }
+    .subscribe {
+      background-color: #fddde6;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
       color: #444;
     }
   </style>
 </head>
 <body>
+
+  <!-- Top Contact Info -->
   <header>
-    <h1>Bloom & Petal</h1>
-    <p>Your Local Flower Boutique</p>
+    <div>📞 +8801758692124</div>
+    <div>📧 Flosumu@gmail.com | <a href="#">Contact Us</a> | <a href="#">Sign In</a></div>
   </header>
 
-  <div class="content">
-    <img src="https://source.unsplash.com/600x400/?flowers" alt="Bouquet" width="100%" style="max-width:600px; border-radius: 12px;" />
-    <p>We craft beautiful, hand-picked arrangements for every occasion.</p>
-    <a href="https://wa.me/yourphonenumber" class="btn">Order on WhatsApp</a>
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collection</a>
+    <a href="#">Catalogue</a>
+    <a href="#">Gallery</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome To</h1>
+      <h2>Flosumu Shop</h2>
+      <p>Flosumu is a local flower shop with more than 20 years of service. We offer the freshest, highest quality, beautiful flowers and plants.</p>
+      <a href="#">Explore Our Shop →</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://i.imgur.com/XYaN0Be.png" alt="Flower Bouquet"/>
+    </div>
+  </section>
+
+  <!-- Offer Section -->
+  <section class="offer">
+    25% OFF – Our all-new flowers! 🌷 Explore now.
+  </section>
+
+  <!-- Subscribe Footer -->
+  <div class="subscribe">
+    🌸 Subscribe to our flower shop newsletter!
   </div>
 
-  <footer>
-    📍 Based in YourCity • 📞 598-41-03-17 • 🌸 @tsivila.com
-  </footer>s
 </body>
 </html>
