@@ -1,4 +1,4 @@
-/* style.css */
+/* contact.css */
 
 /* General Reset and Fonts */
 * {
@@ -35,105 +35,6 @@
     text-decoration: none;
     color: white;
     font-weight: 600;
-  }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    background: #fff0f5;
-    text-align: center;
-  }
-  
-  .hero-text {
-    max-width: 600px;
-  }
-  
-  .hero-text h1 {
-    font-size: 40px;
-    font-family: 'Great Vibes', cursive;
-    color: #333;
-  }
-  
-  .hero-text h2 {
-    font-size: 36px;
-    color: #2d2d2d;
-    margin: 10px 0;
-  }
-  
-  .hero-text p {
-    font-size: 16px;
-    margin: 20px 0;
-  }
-  
-  .hero-text a {
-    text-decoration: none;
-    background-color: #f78da7;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  
-  /* Offer Section */
-  .offer {
-    background-color: #fff;
-    padding: 30px;
-    text-align: center;
-    font-size: 20px;
-    color: #d6336c;
-  }
-  
-  /* Subscribe Section */
-  .subscribe {
-    background-color: #fddde6;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #444;
-  }
-  
-  /* WhatsApp Button */
-  .whatsapp-button {
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
-  .whatsapp-button:hover {
-    background-color: #1EBE54;
-  }
-  
-  /* Full-Width Slider */
-  .full-slider {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    margin-top: 30px;
-  }
-  
-  .full-slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .full-slider img.active {
-    display: block;
   }
   
   /* Contact Page Style */
